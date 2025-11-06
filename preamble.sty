@@ -39,4 +39,36 @@
 % Usage: \usebibentry{key}{field} to display specific bibliography fields
 \RequirePackage{usebib}
 
+% =============================================================================
+% TABLES
+% =============================================================================
+% Package: tabularray
+% Purpose: Modern, powerful table typesetting with better syntax than tabular
+% Features:
+%   - Intuitive key-value interface for table styling
+%   - Built-in support for colors, spans, and alignment
+%   - Better control over spacing, borders, and cell formatting
+% Usage in slides:
+%   - Use \begin{tblr}{options} ... \end{tblr}
+%   - Example: \begin{tblr}{colspec={llr}, hlines, vlines}
+%   - Documentation: texdoc tabularray
+\RequirePackage{tabularray}
+
+% =============================================================================
+% UNITS AND MEASUREMENTS
+% =============================================================================
+% Package: siunitx
+% Purpose: Typeset numbers, units, and quantities with consistent formatting
+% Features:
+%   - Proper spacing between numbers and units
+%   - Automatic formatting of scientific notation
+%   - Range and uncertainty notation support
+% Usage in slides:
+%   - \qty{10}{\meter} for quantities with units
+%   - \unit{\meter\per\second} for units alone
+%   - \num{1.23e-4} for formatted numbers
+%   - Custom units: \DeclareSIUnit\inch{in}
+% Documentation: texdoc siunitx
+\RequirePackage{siunitx}
+
 \endinput
