@@ -71,40 +71,4 @@
 % Documentation: texdoc siunitx
 \RequirePackage{siunitx}
 
-% =============================================================================
-% GRAPHICS AND DIAGRAMS
-% =============================================================================
-% Package: tikz
-% Purpose: Create vector graphics, diagrams, and illustrations programmatically
-% Libraries loaded:
-%   - positioning: Enhanced node positioning with relative coordinates
-%   - circuits.ee.IEC: Electrical engineering circuit symbols (IEC standard)
-%   - shapes.geometric: Geometric shapes like triangles, diamonds, etc.
-% Usage in slides:
-%   - \begin{tikzpicture} ... \end{tikzpicture}
-%   - \node[above=of other] for relative positioning
-%   - \draw circuit symbols for electrical diagrams
-% Documentation: texdoc tikz, texdoc pgfmanual
-\RequirePackage{tikz}
-\usetikzlibrary{arrows.meta, circuits.ee.IEC, positioning, shapes.geometric}
-
-% =============================================================================
-% CIRCUIT DIAGRAMS
-% =============================================================================
-% Package: circuitikz
-% Purpose: Draw electrical circuit diagrams using TikZ
-% Options:
-%   - siunitx: Integrate with siunitx for unit formatting in labels
-% Usage in slides to load symbols but tikz is the frontend:
-%  - \begin{tikzpicture} ... \end{tikzpicture}
-%  - Use circuitikz commands like \draw (0,0) to[resistor] (2,0);
-% Documentation: texdoc circuitikz
-\RequirePackage[european, siunitx]{circuitikz}
-\ctikzset{
-    bipole current style/.append style = {color=red!70!black},
-    bipole voltage style/.append style = {color=fhtw-blue},
-    voltage = straight,
-    % currarrow/.append style = {color=red!70!black},
-}
-
 \endinput
