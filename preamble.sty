@@ -57,7 +57,7 @@
 % =============================================================================
 % UNITS AND MEASUREMENTS
 % =============================================================================
-% Package: siunitx
+%Package: siunitx
 % Purpose: Typeset numbers, units, and quantities with consistent formatting
 % Features:
 %   - Proper spacing between numbers and units
@@ -70,5 +70,21 @@
 %   - Custom units: \DeclareSIUnit\inch{in}
 % Documentation: texdoc siunitx
 \RequirePackage{siunitx}
+
+% =============================================================================
+% PLOTS AND GRAPHICS
+% =============================================================================
+% Package: pgfplots
+% Purpose: Create high-quality function plots and data visualizations
+% Features:
+%   - Consistent style with TikZ
+%   - High precision plotting
+%   - Extensive customization options
+% Usage in slides:
+%   - \begin{tikzpicture}\begin{axis} ... \end{axis}\end{tikzpicture}
+%   - Supports 2D and 3D plots
+% Documentation: texdoc pgfplots
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=newest}
 
 \endinput
