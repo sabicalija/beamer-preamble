@@ -70,6 +70,7 @@
 %   - Custom units: \DeclareSIUnit\inch{in}
 % Documentation: texdoc siunitx
 \RequirePackage{siunitx}
+\sisetup{per-mode=fraction}
 
 % =============================================================================
 % PLOTS AND GRAPHICS
@@ -86,5 +87,21 @@
 % Documentation: texdoc pgfplots
 \RequirePackage{pgfplots}
 \pgfplotsset{compat=newest}
+
+% =============================================================================
+% IMAGE ALIGNMENT
+% =============================================================================
+% Package: adjustbox
+% Purpose: Extend graphicx/includegraphics with alignment and boxing options
+% Options:
+%   - export: Make keys available to \includegraphics directly
+% Features:
+%   - Vertical alignment of images (valign=t/m/b)
+%   - Additional boxing, trimming, and scaling options
+% Usage in slides:
+%   - \includegraphics[width=2cm, valign=m]{image} for vertical alignment in tables
+%   - Useful for aligning images with text in tabularray tables
+% Documentation: texdoc adjustbox
+\RequirePackage[export]{adjustbox}
 
 \endinput
