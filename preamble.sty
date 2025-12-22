@@ -72,6 +72,10 @@
 \RequirePackage{siunitx}
 \sisetup{per-mode=fraction}
 
+% Custom units for digital data
+\DeclareSIUnit\bit{bit}
+\DeclareSIUnit\byte{Byte}
+
 % =============================================================================
 % PLOTS AND GRAPHICS
 % =============================================================================
@@ -103,5 +107,16 @@
 %   - Useful for aligning images with text in tabularray tables
 % Documentation: texdoc adjustbox
 \RequirePackage[export]{adjustbox}
+
+% =============================================================================
+% STANDALONE CLASS SUPPORT
+% =============================================================================
+% When loaded with standalone class (e.g., for TikZ externalization),
+% configure preview package for tight cropping of tikzpicture environments.
+\@ifclassloaded{standalone}{
+    \RequirePackage[active,tightpage]{preview}
+    \PreviewEnvironment{tikzpicture}
+    \setlength\PreviewBorder{2pt}
+}{}
 
 \endinput
